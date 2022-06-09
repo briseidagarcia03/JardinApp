@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jardin.Android", "Jardin\Jardin.Android\Jardin.Android.csproj", "{73E5F591-E74B-4583-8465-D79B0C4FB5CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JardinApp", "Jardin\Jardin\JardinApp.csproj", "{7BB98FB5-6296-4888-8D17-7191A7A5177A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73E5F591-E74B-4583-8465-D79B0C4FB5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E5F591-E74B-4583-8465-D79B0C4FB5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E5F591-E74B-4583-8465-D79B0C4FB5CF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{73E5F591-E74B-4583-8465-D79B0C4FB5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E5F591-E74B-4583-8465-D79B0C4FB5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E5F591-E74B-4583-8465-D79B0C4FB5CF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7BB98FB5-6296-4888-8D17-7191A7A5177A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB98FB5-6296-4888-8D17-7191A7A5177A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB98FB5-6296-4888-8D17-7191A7A5177A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7BB98FB5-6296-4888-8D17-7191A7A5177A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB98FB5-6296-4888-8D17-7191A7A5177A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB98FB5-6296-4888-8D17-7191A7A5177A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EE970DE-B299-4E5C-85DB-53EF474C45BB}
+	EndGlobalSection
+EndGlobal

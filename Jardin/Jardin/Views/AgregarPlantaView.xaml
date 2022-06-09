@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:JardinApp.ViewModels" x:DataType="viewmodels:JardinViewModel"
+             x:Class="JardinApp.Views.AgregarPlanta" Background="#B4E197">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Gray"></Setter>
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="DarkSlateGray"></Setter>
+            <Setter Property="FontSize" Value="Small"></Setter>
+            <Setter Property="Placeholder" Value="Inserte la información"></Setter>
+            <Setter Property="PlaceholderColor" Value="LightGray"></Setter>
+
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Command="{Binding AgregarCommand}" Text="Agregar"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <FlexLayout>
+            <Label FontSize="Small" TextColor="white">Escriba los datos de su planta</Label>
+        </FlexLayout>
+    </NavigationPage.TitleView>
+    <ScrollView>
+        <StackLayout Margin="0,20"> 
+        
+        <Frame Margin="10">
+            <StackLayout>
+            <Label>Nombre de la planta/flor/árbol:</Label>
+            <Entry Text="{Binding Planta.Nombre}"></Entry>
+        </StackLayout> 
+        </Frame>
+        <Frame Margin="10">
+            <StackLayout>
+                <Label>Modo de riego:</Label>
+                <Entry Text="{Binding Planta.Riego}"></Entry>
+            </StackLayout>
+        </Frame>
+        <Frame Margin="10">
+            <StackLayout>
+                <Label>Ubicación:</Label>
+                <Entry Text="{Binding Planta.Ubicacion}"></Entry>
+            </StackLayout>
+        </Frame>
+        <Frame Margin="10">
+            <StackLayout>
+                <Label>Luminosidad:</Label>
+                <Entry Text="{Binding Planta.Luz}"></Entry>
+            </StackLayout>
+        </Frame>
+        <Frame Margin="10">
+            <StackLayout>
+                <Label>URL de la imagen:</Label>
+                <Entry Text="{Binding Planta.Imagen}" Keyboard="Url"></Entry>
+            </StackLayout>
+        </Frame>
+
+        <Frame Margin="10">
+            <StackLayout>
+                <Label>Comentario(opcional):</Label>
+                <Entry Text="{Binding Planta.Comentario}" ></Entry>
+            </StackLayout>
+        </Frame>
+            <Label Text="{Binding Error}" TextColor="MediumVioletRed" HorizontalTextAlignment="Center" Margin="0,10,0,30" 
+                   FontAttributes="Italic" ></Label>
+            
+        <!--<Button Text="Agregar" Background="#4B8673" CornerRadius="20" HorizontalOptions="CenterAndExpand"
+                Padding="30,10" Margin="0,5,0,30" Command="{Binding AgregarCommand}" ></Button>-->
+        
+
+    </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

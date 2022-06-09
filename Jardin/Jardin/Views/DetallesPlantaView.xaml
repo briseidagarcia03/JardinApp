@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:JardinApp.ViewModels" 
+             x:Class="JardinApp.Views.DetallesPlanta" Background="#B4E197">
+    <NavigationPage.TitleView>
+    <FlexLayout>
+            <Label FontSize="16" TextColor="white">Detalles de la planta</Label>
+    </FlexLayout>
+    </NavigationPage.TitleView>
+    <StackLayout>
+        <Frame CornerRadius="999" HorizontalOptions="CenterAndExpand" HeightRequest="300" WidthRequest="300" Margin="0,40,0,20" Padding="0">
+            <Image Aspect="AspectFill" Source="{Binding Planta.Imagen}"></Image>
+  
+        </Frame>
+        <Frame Margin="20,0,20,30" VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <Label Text="{Binding Planta.Nombre}" TextColor="Black" HorizontalOptions="CenterAndExpand" 
+                       FontAttributes="Bold" FontSize="Large" Margin="0,5,0,10"></Label>
+                <FlexLayout  JustifyContent="Center">
+                     <Label Text="Riego:" TextColor="SeaGreen" FontSize="Body"  Margin="0,0,10,0"></Label>
+                     <Label Text="{Binding Planta.Riego}" TextColor="DarkSlateGray" FontSize="Body"></Label>
+                </FlexLayout>
+                <FlexLayout JustifyContent="Center">
+                    <Label Text="Luz:" TextColor="SeaGreen" HorizontalTextAlignment="Center" FontSize="Body" Margin="0,0,10,0"></Label>
+                    <Label Text="{Binding Planta.Luz}" TextColor="DarkSlateGray" FontSize="Body"></Label>
+                </FlexLayout>
+                <FlexLayout JustifyContent="Center">
+                    <Label Text="Ubicación:" TextColor="SeaGreen" Margin="0,0,10,0" FontSize="Body" HorizontalTextAlignment="Center"></Label>
+                    <Label Text="{Binding Planta.Ubicacion}" TextColor="DarkSlateGray" FontSize="Body"></Label>
+                </FlexLayout>
+                <Label Text="Comentario: " TextColor="SeaGreen" Margin="0,20,0,0"></Label>
+                <Label Text="{Binding Planta.Comentario}" TextColor="DarkSlateGray"></Label>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
