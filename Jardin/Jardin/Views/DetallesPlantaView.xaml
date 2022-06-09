@@ -7,8 +7,10 @@
             <Label FontSize="16" TextColor="white">Detalles de la planta</Label>
     </FlexLayout>
     </NavigationPage.TitleView>
+
     <StackLayout>
-        <Frame CornerRadius="999" HorizontalOptions="CenterAndExpand" HeightRequest="300" WidthRequest="300" Margin="0,40,0,20" Padding="0">
+        <Frame CornerRadius="999" HorizontalOptions="CenterAndExpand" HeightRequest="260" WidthRequest="260" Margin="0,40,0,20" Padding="0" >
+            
             <Image Aspect="AspectFill" Source="{Binding Planta.Imagen}"></Image>
   
         </Frame>
@@ -30,7 +32,9 @@
                 </FlexLayout>
                 <Label Text="Comentario: " TextColor="SeaGreen" Margin="0,20,0,0"></Label>
                 <Label Text="{Binding Planta.Comentario}" TextColor="DarkSlateGray"></Label>
+               
             </StackLayout>
+            
         </Frame>
     </StackLayout>
 </ContentPage>

@@ -5,12 +5,12 @@
     <ContentPage.BindingContext>
         <viewmodels:JardinViewModel x:Name="pvm"></viewmodels:JardinViewModel>
     </ContentPage.BindingContext>
-    <ContentPage.ToolbarItems >
+    <ContentPage.ToolbarItems>
         <ToolbarItem Command="{Binding VistaCommand}" CommandParameter="Agregar" Text="Agregar"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <NavigationPage.TitleView>
         <FlexLayout>
-            <Image Source="maceta.png" HeightRequest="40" VerticalOptions="Center"></Image>
+            <Image Source="maceta.png" HeightRequest="40" VerticalOptions="Center" Margin="5"></Image>
             <Label FontSize="Medium" TextColor="White" VerticalTextAlignment="Center" FontAttributes="Italic" >Mi Jardín</Label>
         </FlexLayout>
     </NavigationPage.TitleView>
@@ -21,21 +21,24 @@
         <CollectionView ItemsSource="{Binding Jardin}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <SwipeView BackgroundColor="#E9EFC0">
-                        <SwipeView.RightItems >
-                            <SwipeItem Command="{Binding Source={x:Reference pvm}, Path=EditarCommand}" CommandParameter="{Binding .}"
-                               BackgroundColor="#9EB23B" Text="Editar" ></SwipeItem>
-                            <SwipeItem Clicked="SwipeItem_Clicked" CommandParameter="{Binding .}"
-                               BackgroundColor="#FF5D5D" Text="Eliminar"></SwipeItem>
-                        </SwipeView.RightItems>
+                   
                         <StackLayout>
-                            <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={x:Reference pvm}, Path=VerDetallesCommand}"
-                                                              CommandParameter="{Binding .}"></TapGestureRecognizer>
-                            </StackLayout.GestureRecognizers>
-                            <Frame Background="white" CornerRadius="10" Margin="10,30,10,5" Padding="0">
+                            
+                            <Frame  CornerRadius="10" Margin="10,30,10,5" Padding="0">
+                                <SwipeView BackgroundColor="white">
+                                   <SwipeView.RightItems >
+                                    <SwipeItem Command="{Binding Source={x:Reference pvm}, Path=EditarCommand}" CommandParameter="{Binding .}"
+                                     BackgroundColor="#9EB23B" Text="Editar" ></SwipeItem>
+                                    <SwipeItem Clicked="SwipeItem_Clicked" CommandParameter="{Binding .}"
+                                     BackgroundColor="#FF5D5D" Text="Eliminar"></SwipeItem>
+                                </SwipeView.RightItems> 
+                                
+                                
                                 <Grid  Margin="10">
-                                    
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference pvm}, Path=VerDetallesCommand}"
+                                                              CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                    </Grid.GestureRecognizers>
                                     <Grid.RowDefinitions>
                                        <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
@@ -61,14 +64,13 @@
                                     </StackLayout>
 
                                 </Grid>
+                            </SwipeView>
 
-                         </Frame>
+                        </Frame>
                       
                             
                         </StackLayout>
-                        
-                    </SwipeView>
-                   
+                  
                 </DataTemplate>
                 
                 
